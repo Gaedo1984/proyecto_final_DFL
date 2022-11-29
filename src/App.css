@@ -1,0 +1,149 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App{
+  background-color: #ffffff;
+}
+
+#root {
+  /*max-width: 1280px;*/
+  width: 100%;
+  height:100vh;
+}
+
+.menu-carrito{
+  font-size: 17px;
+  color: #ffffff;
+  background-color: #BE0303;
+  min-height: 30px;
+}
+
+.tit-ricascarnes{
+  padding-left: 25px;
+  text-align: left;
+  padding-top: 0.50rem;
+  padding-bottom: 0.50rem;
+}
+
+.tit-carrito{
+  text-align: right;
+  padding-right: 25px;
+  padding-top: 0.50rem;
+  padding-bottom: 0.50rem;
+}
+
+nav{
+  font-size: 14px;
+}
+
+.contenedor-home{
+  /*height:100vh;*/
+  width: 100%;
+  min-height: 700px;
+}
+
+.mantenedor-login{
+  width: 100%;
+  min-height: 700px;
+}
+
+
+.contenedor-tipocarnes{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.contenedor-carrito{
+  width: 100%;
+  min-height: 700px;
+}
+
+.contenedor-desc{
+  padding-left: 15px;
+}
+
+.titulo-detalle{
+  padding-top: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+.desc-detalle{
+  text-align: left;
+  padding-left: 30px;
+}
+
+.titulo-home{
+  font-size: 25px;
+  padding-top: 15px;
+}
+
+.contenedor-footer{
+  text-align: center;
+  font-size: 17px;
+  background-color: #BE0303;
+  color: #ffffff;
+  height: 50px;
+  line-height:0px;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+@media (max-width: 576px) {
+
+  .tit-ricascarnes{
+    text-align: center;
+  }
+  
+  .tit-carrito{
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .desc-detalle{
+    padding-top: 10px;
+    padding-left: 0px;
+  }
+
+}
+
+@media (min-width: 577px) and (max-width: 992px){
+
+  .tit-ricascarnes{
+    text-align: center;
+  }
+  
+  .tit-carrito{
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .desc-detalle{
+    padding-top: 10px;
+    padding-left: 0px;
+  }
+
+}
