@@ -7,7 +7,7 @@ const Carrito = ()=>{
                 <Header></Header>
                 <div className="row">
                     <div className='titulo-home'>
-                        Detalle del pedido
+                        Detalle del pedidos
                     </div>
                 </div>
             </div>
