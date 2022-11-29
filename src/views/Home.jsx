@@ -9,7 +9,7 @@ const Home = ()=>{
                 <Header></Header>
                 <div className="row">
                     <div className='titulo-home'>
-                        Bienvenidos a Ricascarnes.cl
+                        Bienvenidos a Ricascarnes.com
                     </div>
                 </div>
             </div>
