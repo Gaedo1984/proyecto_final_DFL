@@ -29,7 +29,7 @@ const Home = () => {
                                     <img src="https://cocina-casera.com/wp-content/uploads/2015/05/carne-de-pollo-1.jpg" className="d-block w-100" alt="..." />
                                 </div>
                                 <div className="carousel-item">
-                                    <img src="https://thefoodtech.com/wp-content/uploads/2020/09/maduracion-de-carne-de-pollo.jpg" className="d-block w-100" alt="..." />
+                                    <img src="https://myzone-26ex1sw6hijbg4oa.netdna-ssl.com/wp-content/uploads/2020/05/DIA-MUNDIAL-DEL-POLLO.png" className="d-block w-100" alt="..." />
                                 </div>
                             </div>
                             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
