@@ -15,6 +15,7 @@ import Ofertasespeciales from './views/Ofertasespeciales'
 import Footer from './views/Footer'
 import Login from './views/Login'
 import Carrito from './views/Carrito'
+import Homeintranet from './views/Homeintranet'
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
               <Route path='/ofertas_especiales' element={<Ofertasespeciales></Ofertasespeciales>}></Route>
               <Route path='/login' element={<Login></Login>}></Route>
               <Route path='/carrito' element={<Carrito></Carrito>}></Route>
+              <Route path='/home_intranet' element={<Homeintranet></Homeintranet>}></Route>
             </Routes>
             <Footer></Footer>
           </BrowserRouter>

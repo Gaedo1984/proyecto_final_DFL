@@ -1,8 +1,12 @@
+import { useParams, useNavigate } from "react-router-dom"
 import banner from './../assets/banner.jpg'
 import login from './../assets/login.png'
 import Header from './Header'
 
 const Login = ()=>{
+    const navigate = useNavigate()
+    const intranet = () => navigate(`/home_intranet`)
+
     return(
         <div className="container-fluid">
             <div className="mantenedor-login">
@@ -20,7 +24,7 @@ const Login = ()=>{
                             <input type="password" className="form-control" id="floatingPassword" placeholder="Password"></input>
                             <label>Password</label>
                         </div>
-                        <button className="w-100 btn btn-lg btn-primary" type="submit">Ingresar</button>
+                        <button type="button" className="w-100 btn btn-lg btn-primary" onClick={()=>intranet()}>Ingresar</button>
                     </form>
                 </main>
             </div>
