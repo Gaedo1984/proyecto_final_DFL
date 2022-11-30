@@ -25,6 +25,19 @@ const Tiposcarnes = ()=>{
                         Carne de {variedad}
                     </div>
                 </div>
+                <div className="row">
+                    <div className="contenedor-buscador">
+                        <form className="row g-3">
+                            <div className="col-auto">
+                                <input type="text" className="form-control" id="staticEmail2"></input>
+                            </div>
+                            <div className="col-auto">
+                                <button type="submit" className="btn btn-primary mb-3">Buscar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <hr></hr>
                 <div className="row contenedor-tipocarnes">
                     <div className="row row-cols-1 row-cols-md-3 g-4">
                         <div className="col">

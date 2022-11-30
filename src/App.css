@@ -45,6 +45,11 @@ nav{
   min-height: 700px;
 }
 
+.contenedor-detalle{
+  width: 100%;
+  min-height: 800px;
+}
+
 .mantenedor-login{
   width: 100%;
   min-height: 700px;
@@ -89,6 +94,55 @@ nav{
   color: #ffffff;
   height: 50px;
   line-height:0px;
+}
+
+.contenedor-buscador{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.contenedor-detalle-carrito{
+  padding-top: 20px;
+}
+
+.pizza-carrito{
+  background-color: #ffffff;
+  width: 94%;
+}
+
+.valores-carrito{
+  width:70px;
+  padding: 10px;
+  display: flex;
+  align-content: center;
+}
+
+.precio-carro{
+  padding-right: 7px;
+  font-weight: bold;
+}
+
+.sacar-carro{
+  padding-right: 7px;
+}
+
+.agregar-carro{
+  padding-left: 7px;
+}
+
+.cantidad-productos{
+  font-weight: bold;
+}
+
+.tot-final-carrito{
+  padding-left: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.btn-pagar{
+  padding: 10px;
 }
 
 .form-signin {

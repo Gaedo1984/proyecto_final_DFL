@@ -5,7 +5,8 @@ import Header from './Header'
 const Detallecarnes = ()=>{
     return(
         <div className="container-fluid">
-            <div className='contenedor-home'>
+            <div className='contenedor-detalle'>
+                <Header></Header>
                 <div className='row titulo-detalle'>
                     <p>Tomahawk de Vacuno Premium</p>
                 </div>

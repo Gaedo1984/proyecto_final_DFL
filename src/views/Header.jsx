@@ -1,9 +1,9 @@
-import banner from './../assets/banner.jpg'
+import banner from './../assets/banner_3.jpg'
 
 const Header = ()=>{
     return(
         <div className="row">
-            <img src={banner} className="img-fluid" alt="..." style={{height:'280px'}}></img>
+            <img src={banner} className="img-fluid" alt="..."></img>
         </div>
     )
 }
