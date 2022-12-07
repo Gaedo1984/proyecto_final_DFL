@@ -20,16 +20,16 @@ const Navbar = ()=>{
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-3 mb-lg-0">
                         <li className="nav-item">
-                             <NavLink className="nav-link active" aria-current="page" to='/tipos_carnes/cerdo'><i class="fas fa-piggy-bank"></i> Cerdo</NavLink>
+                             <NavLink className="nav-link active" aria-current="page" to='/tipos_carnes/cerdo'><i className="fas fa-piggy-bank"></i> Cerdo</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link active" aria-current="page" to='/tipos_carnes/vacuno' href="#"><i class="fas fa-bacon"></i> Vacuno</NavLink>
+                            <NavLink className="nav-link active" aria-current="page" to='/tipos_carnes/vacuno' href="#"><i className="fas fa-bacon"></i> Vacuno</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link active" aria-current="page" to='/tipos_carnes/ave' href="#"><i class="fas fa-drumstick-bite"></i> Aves</NavLink>
+                            <NavLink className="nav-link active" aria-current="page" to='/tipos_carnes/ave' href="#"><i className="fas fa-drumstick-bite"></i> Aves</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link active" aria-current="page" to='/ofertas_especiales'><i class="fas fa-search-dollar"></i> Ofertas especiales</NavLink>
+                            <NavLink className="nav-link active" aria-current="page" to='/ofertas_especiales'><i className="fas fa-search-dollar"></i> Ofertas especiales</NavLink>
                         </li>
                     </ul>
                     <div>

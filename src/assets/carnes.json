@@ -1,0 +1,222 @@
+[
+  {
+    "desc": "Las chuletas de aguja de cerdo se cortan desde el lomo o espalda del cerdo. Tienen una capa fina de grasa por su exterior. Contienen poco tejido conectivo, lo que las hace adecuadas para métodos de cocción rápidos y secos, como la parrilla.",
+    "id": "C001",
+	"tipo": "cerdo",
+	"oferta": "si",
+    "img_big": "https://www.cuatros.cl/ricascarnes_imagenes/cerdo/b_chuletas_aguja_cerdo.jpg",
+	"img_small": "https://www.cuatros.cl/ricascarnes_imagenes/cerdo/s_chuletas_aguja_cerdo.jpg",
+    "name": "Chuleta Aguja",
+    "price_normal": 7950,
+	"price_oferta": 4950
+  },
+  {
+    "desc": "Recorre la parte superior central del cuerpo del animal y se obtiene separándola de las costillas. Es una carne mu magra y sabrosa. Se utiliza asada como pieza entera o rellena y fileteada y emparrillada posteriormente tanto de forma adobada como fresca.",
+    "id": "C002",
+	"tipo": "cerdo",
+	"oferta": "no",
+    "img_big": "https://www.cuatros.cl/ricascarnes_imagenes/cerdo/b_cinta_lomo.jpg",
+	"img_small": "https://www.cuatros.cl/ricascarnes_imagenes/cerdo/s_cinta_lomo.jpg",
+    "name": "Cinta de Lomo",
+    "price_normal": 5950,
+	"price_oferta": 3950
+  },
+  {
+    "desc": "Parte del cerdo que comprende huesos largos y planos, que en su conjunto forman la caja torácica y que rodea el pecho. Ideal para guisos, estofado, parrilla y horno. No contiene OGM (Organismos modificados genéticamente) ni alérgenos.",
+    "id": "C003",
+	"tipo": "cerdo",
+	"oferta": "no",
+    "img_big": "https://www.cuatros.cl/ricascarnes_imagenes/cerdo/b_costillar_cerdo.jpg",
+	"img_small": "https://www.cuatros.cl/ricascarnes_imagenes/cerdo/s_costillar_cerdo.jpg",
+    "name": "Constillar de Cerdo",
+    "price_normal": 11780,
+	"price_oferta": 9570
+  },
+  {
+    "desc": "La paleta o paletilla es el nombre genérico del producto obtenido del grupo de músculos, grasa y huesos que componen los miembros delanteros del ganado en general y, particularmente, del cerdo. Puede procesarse cocido o salado en crudo y curado de forma natural. Presenta el mismo proceso de elaboración que el jamón.",
+    "id": "C004",
+	"tipo": "cerdo",
+	"oferta": "no",
+    "img_big": "https://www.cuatros.cl/ricascarnes_imagenes/cerdo/b_paletilla_cerdo.jpg",
+	"img_small": "https://www.cuatros.cl/ricascarnes_imagenes/cerdo/s_paletilla_cerdo.jpg",
+    "name": "Paletilla de Cerdo",
+    "price_normal": 4390,
+	"price_oferta": 2540
+  },
+  {
+    "desc": "Se denomina panceta, o de forma más generalizada «beicon», a la falda del cerdo, es decir, a la carne de la res que cuelga de las agujas (costillas del cuarto delantero del animal), sin asirse a ningún hueso ni costilla. Se trata en realidad de la parte abdominal del cerdo.",
+    "id": "C005",
+	"tipo": "cerdo",
+	"oferta": "si",
+    "img_big": "https://www.cuatros.cl/ricascarnes_imagenes/cerdo/b_panceta_cerdo.jpg",
+	"img_small": "https://www.cuatros.cl/ricascarnes_imagenes/cerdo/s_panceta_cerdo.jpg",
+    "name": "Panceta de Cerdo",
+    "price_normal": 12990,
+	"price_oferta": 10990
+  },
+  {
+    "desc": "La papada de cerdo es la capa de grasa, piel y carne ubicada en el cuello del cerdo, bajo su cara. Es una pieza muy tierna y jugosa, incluso más que la panceta de cerdo. De ahí que sea un ingrediente exquisito para realzar el sabor de un buen cocido.",
+    "id": "C006",
+	"tipo": "cerdo",
+	"oferta": "no",
+    "img_big": "https://www.cuatros.cl/ricascarnes_imagenes/cerdo/b_papada_cerdo.jpg",
+	"img_small": "https://www.cuatros.cl/ricascarnes_imagenes/cerdo/s_papada_cerdo.jpg",
+    "name": "Papada de Cerdo",
+    "price_normal": 3499,
+	"price_oferta": 2990
+  },
+  {
+    "desc": "Se obtiene de la zona de la panceta -por lo tanto tiene bastante grasa- e incluyen huesos de las costillas. El pecho o pechito tiene una capa de grasa que si se dora puede ofrecer un crujiente delicioso.",
+    "id": "C007",
+	"tipo": "cerdo",
+	"oferta": "no",
+    "img_big": "https://www.cuatros.cl/ricascarnes_imagenes/cerdo/b_pecho_fresco.jpg",
+	"img_small": "https://www.cuatros.cl/ricascarnes_imagenes/cerdo/s_pecho_fresco.jpg",
+    "name": "Pecho Fresco de Cerdo",
+    "price_normal": 6197,
+	"price_oferta": 5590
+  },
+  {
+    "desc": "El solomillo de cerdo es una de las piezas más sabrosas y apreciadas en la cocina. Esta selecta carne destaca por su textura, sabor y escasez de grasa. Posee forma cónica y se encuentra alojada en la zona lumbar, encima de los riñones y justo debajo del lomo.",
+    "id": "C008",
+	"tipo": "cerdo",
+	"oferta": "no",
+    "img_big": "https://www.cuatros.cl/ricascarnes_imagenes/cerdo/b_solomillo_cerdo.jpg",
+	"img_small": "https://www.cuatros.cl/ricascarnes_imagenes/cerdo/s_solomillo_cerdo.jpg",
+    "name": "Solomillo de Cerdo",
+    "price_normal": 13500,
+	"price_oferta": 11250
+  },
+  {
+    "desc": "La Posta Negra es un corte de forma rectangular, que no tiene nervios ni grasa. Se ubica en la parte interna del muslo y limita en su delantera con la posta rosada. Es de color rojo oscuro y se utiliza en preparaciones como bistec, carbonada y molida.",
+    "id": "C009",
+	"tipo": "vacuno",
+	"oferta": "no",
+    "img_big": "https://www.cuatros.cl/ricascarnes_imagenes/vacuno/b_posta_negra.jpg",
+	"img_small": "https://www.cuatros.cl/ricascarnes_imagenes/vacuno/s_posta_negra.jpg",
+    "name": "Posta Negra",
+    "price_normal": 7990,
+	"price_oferta": 5990
+  },
+  {
+    "desc": "Es un corte magro, semiblando y muy versátil, ya que permite una gran variedad de preparaciones a la plancha y sartén. También se utiliza para preparaciones a la cacerola, e incluso en crudos, tártaros y carpaccio, siendo ideal para deleitar a los tuyos en casa.",
+    "id": "C010",
+	"tipo": "vacuno",
+	"oferta": "no",
+    "img_big": "https://www.cuatros.cl/ricascarnes_imagenes/vacuno/b_asiento_picana.jpg",
+	"img_small": "https://www.cuatros.cl/ricascarnes_imagenes/vacuno/s_asiento_picana.jpg",
+    "name": "Asiento Picana",
+    "price_normal": 14500,
+	"price_oferta": 12000
+  },
+  {
+    "desc": "Corresponde a un corte alargado poco fibroso. Preferido por no tener mucha grasa y nada de nervios. Se puede preparar a la parrilla, a la plancha y sartén, dependiendo del grosor del corte.",
+    "id": "C011",
+	"tipo": "vacuno",
+	"oferta": "no",
+    "img_big": "https://www.cuatros.cl/ricascarnes_imagenes/vacuno/b_lomo_liso.jpg",
+	"img_small": "https://www.cuatros.cl/ricascarnes_imagenes/vacuno/s_lomo_liso.jpg",
+    "name": "Lomo Liso",
+    "price_normal": 14500,
+	"price_oferta": 12000
+  },
+  {
+    "desc": "El Lomo Vetado se ubica en el dorso o lomo del animal, por eso su nombre. Es uno de los cortes preferidos de los parrilleros por su marmoleo, sabor y terneza. El Lomo Vetado está entre el Huachalomo y el Lomo Liso, iniciándose en la cuarta costilla.",
+    "id": "C012",
+	"tipo": "vacuno",
+	"oferta": "si",
+    "img_big": "https://www.cuatros.cl/ricascarnes_imagenes/vacuno/b_lomo_vetado.jpg",
+	"img_small": "https://www.cuatros.cl/ricascarnes_imagenes/vacuno/s_lomo_vetado.jpg",
+    "name": "Lomo Vetado",
+    "price_normal": 22670,
+	"price_oferta": 23000
+  },
+  {
+    "desc": "El huachalomo vacuno es el corte proveniente de la región dorsal del cuello, se ubica entre la cabeza y el lomo vetado. Es rectangular, de color rojo, tiene una infiltración de grasa, lo que lo hace un corte muy sabroso.",
+    "id": "C013",
+	"tipo": "vacuno",
+	"oferta": "no",
+    "img_big": "https://www.cuatros.cl/ricascarnes_imagenes/vacuno/b_huachalomo.jpg",
+	"img_small": "https://www.cuatros.cl/ricascarnes_imagenes/vacuno/s_huachalomo.jpg",
+    "name": "Huachalomo",
+    "price_normal": 10990,
+	"price_oferta": 7000
+  },
+  {
+    "desc": "Este corte, sobrecostilla vacuno,  se consigue en la pared lateral del cuello, se caracteriza por tener una irregular forma cuadrada. Sus dos capas de carne son muy blandas y tienen muy poca grasa. La sobrecostilla vacuna es perfecta para distintas preparaciones como parrillas, platos al horno, cacerola, cazuela, estofado o carne mechada.",
+    "id": "C014",
+	"tipo": "vacuno",
+	"oferta": "si",
+    "img_big": "https://www.cuatros.cl/ricascarnes_imagenes/vacuno/b_sobrecostilla.jpg",
+	"img_small": "https://www.cuatros.cl/ricascarnes_imagenes/vacuno/s_sobrecostilla.jpg",
+    "name": "Sobrecostilla",
+    "price_normal": 8247,
+	"price_oferta": 6990
+  },
+  {
+    "desc": "El Asado Carnicero Vacuno tiene una forma levemente triangular y alargada, se ubica en la cara interna del hueso paleta. Tiene algunas vetas fibrosas, nervios y algunas partes un poco grasas, por lo que es un corte ideal para preparaciones al horno, parrilla o cacerola.",
+    "id": "C015",
+	"tipo": "vacuno",
+	"oferta": "no",
+    "img_big": "https://www.cuatros.cl/ricascarnes_imagenes/vacuno/b_asado_carnicero.jpg",
+	"img_small": "https://www.cuatros.cl/ricascarnes_imagenes/vacuno/s_asado_carnicero.jpg",
+    "name": "Asado Carnicero",
+    "price_normal": 10387,
+	"price_oferta": 9000
+  },
+  {
+    "desc": "La Posta rosada se ubica en la parte anterior del muslo, limita hacia adelante con la Posta negra y hacia atrás con el Pollo ganso. Tiene un color rojizo oscuro y caracterizada por la poca grasa que tiene. Se utiliza bastante para bistec, escalopa y en estofados.",
+    "id": "C016",
+	"tipo": "vacuno",
+	"oferta": "no",
+    "img_big": "https://www.cuatros.cl/ricascarnes_imagenes/vacuno/b_posta_rosada.jpg",
+	"img_small": "https://www.cuatros.cl/ricascarnes_imagenes/vacuno/s_posta_rosada.jpg",
+    "name": "Posta Rosada",
+    "price_normal": 14985,
+	"price_oferta": 12300
+  },
+  {
+    "desc": "La carne de la pechuga de pollo es una excelente fuente de proteína. Ya que es un producto animal, el pollo contiene todos los aminoácidos esenciales que se necesitan. Es menos grasa que la mayoría de carne roja, por lo que puede ayudar a reducir las grasas saturadas y el consumo de calorías.",
+    "id": "C017",
+	"tipo": "ave",
+	"oferta": "no",
+    "img_big": "https://www.cuatros.cl/ricascarnes_imagenes/ave/b_pechuga_pollo.jpg",
+	"img_small": "https://www.cuatros.cl/ricascarnes_imagenes/ave/s_pechuga_pollo.jpg",
+    "name": "Pechuga de Pollo",
+    "price_normal": 2871,
+	"price_oferta": 2300
+  },
+  {
+    "desc": "El pollo tomatero es una pieza que tiene una carne firme, delicada y con buen sabor. Puedes preparar este pollo siguiendo tu receta favorita, aunque nosotros te recomendamos que lo prepares asado al horno con su salsa o al ajillo.El pollo tomatero no es muy común en las carnicerías pero en ricascarnes te facilitamos la compra de este producto para que lo disfrutes sin salir de casa.",
+    "id": "C018",
+	"tipo": "ave",
+	"oferta": "si",
+    "img_big": "https://www.cuatros.cl/ricascarnes_imagenes/ave/b_pollo_tomatero.jpg",
+	"img_small": "https://www.cuatros.cl/ricascarnes_imagenes/ave/s_pollo_tomatero.jpg",
+    "name": "Pollo Tomatero",
+    "price_normal": 4871,
+	"price_oferta": 2500
+  },
+  {
+    "desc": "El trutro entero de pollo es ideal para cocinar a la parrilla, al horno o a la cacerola ya que es uno de los cortes preferidos de los parrilleros por su marmoleo, sabor y terneza. Disfrútalo en todas sus versiones junto a tus amigos y familia.",
+    "id": "C019",
+	"tipo": "ave",
+	"oferta": "si",
+    "img_big": "https://www.cuatros.cl/ricascarnes_imagenes/ave/b_tuto_pollo.jpg",
+	"img_small": "https://www.cuatros.cl/ricascarnes_imagenes/ave/s_tuto_pollo.jpg",
+    "name": "Tuto de Pollo",
+    "price_normal": 8457,
+	"price_oferta": 7990
+  },
+  {
+    "desc": "Esta carne tiene muy poca grasa, menos del 4% de su peso, un nivel de colesterol por debajo del contenido medio del grupo de carnes. El aporte calórico es incluso inferior al de la carne de pollo sin piel.",
+    "id": "C020",
+	"tipo": "ave",
+	"oferta": "no",
+    "img_big": "https://www.cuatros.cl/ricascarnes_imagenes/ave/b_avestruz.jpg",
+	"img_small": "https://www.cuatros.cl/ricascarnes_imagenes/ave/s_avestruz.jpg",
+    "name": "Carne de Avestruz",
+    "price_normal": 37800,
+	"price_oferta": 35430
+  }  
+]
