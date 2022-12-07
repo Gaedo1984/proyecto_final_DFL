@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
+import Context from './context/context'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'jquery/dist/jquery.min.js'
@@ -19,12 +20,28 @@ import Homeintranet from './views/Homeintranet'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+  const api_carnes = "./src/assets/carnes.json"
+  const [carnes, setCarnes] = useState([])
+
+  useEffect(
+    ()=>{
+      fetch(api_carnes)
+        .then((res)=> res.json())
+        .then((json)=>{
+          //console.log(json)
+          setCarnes(json)
+        })
+        .catch((e)=>console.log(e))
+    }, [])
+
+  
+  const globalState = {carnes}
 
   return (
     <div className="App">
-      
-          <BrowserRouter>
+      <Context.Provider value={globalState}>
+        <BrowserRouter>
             <Navbar></Navbar>
             <Routes>
               <Route path='/' element={<Home></Home>}></Route>
@@ -36,8 +53,8 @@ function App() {
               <Route path='/home_intranet' element={<Homeintranet></Homeintranet>}></Route>
             </Routes>
             <Footer></Footer>
-          </BrowserRouter>
-      
+        </BrowserRouter>
+      </Context.Provider>
     </div>
   )
 }

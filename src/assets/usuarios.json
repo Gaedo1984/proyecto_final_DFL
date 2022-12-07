@@ -1,0 +1,34 @@
+[
+  {
+    "id": "001",
+    "nombre": "Gustavo Aedo",
+    "nick": "gaedo",
+    "password": "1234",
+    "perfil": "administrador",
+    "correo": "gaedo@gmail.com"
+  },
+  {
+    "id": "002",
+    "nombre": "Francisco Burchardt",
+    "nick": "fburchardt",
+    "password": "1234",
+    "perfil": "administrador",
+    "correo": "fburchardt@gmail.com"
+  },
+  {
+    "id": "003",
+    "nombre": "Marcelo Rojas",
+    "nick": "mrojas",
+    "password": "1234",
+    "perfil": "administrador",
+    "correo": "mrojas@gmail.com"
+  },
+  {
+    "id": "004",
+    "nombre": "Juan González",
+    "nick": "jgonzalez",
+    "password": "1234",
+    "perfil": "colaborador",
+    "correo": "jgonzalez@gmail.com"
+  }
+]

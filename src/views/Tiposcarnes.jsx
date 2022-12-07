@@ -1,4 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom"
+import Context from "../context/context"
+import { useContext, useEffect, useState } from "react"
+
 import Header from './Header'
 
 import banner from './../assets/banner.jpg'
@@ -10,10 +13,18 @@ import asado_carnicero from './../assets/asado_carnicero.jpg'
 const Tiposcarnes = ()=>{
 
     const {variedad} = useParams()
+    const {carnes} = useContext(Context)
+
+    const [tipos_carnes, setTiposcarnes] = useState([])
+    
     const navigate = useNavigate()
 
-    //Aquí tiene que ir el ID de la carne
-    var id_carne = 1;
+    useEffect(()=>{
+        const tipos_carnes = carnes.filter((carne)=>carne.tipo === variedad)
+        setTiposcarnes(tipos_carnes)
+    }, [variedad])
+
+  
     const ver_descripcion = (id_carne) => navigate(`/detalle_carnes/${id_carne}`)
 
     return(
@@ -40,42 +51,21 @@ const Tiposcarnes = ()=>{
                 <hr></hr>
                 <div className="row contenedor-tipocarnes">
                     <div className="row row-cols-1 row-cols-md-3 g-4">
-                        <div className="col">
-                            <span style={{fontSize:'17px', fontWeight:'bold'}}>Lomo Vetado</span>
-                            <div className="card">
-                                <img src={lomo_vetado} class="card-img-top" style={{width:'100%'}} alt="..."></img>
-                                <div className="card-body" style={{textAlign:'right'}}>
-                                    <button type="button" class="btn btn-danger btn-sm" onClick={()=>ver_descripcion(id_carne)}>Ver descripción</button>
+                    {
+                        tipos_carnes.map((carne)=>{
+                            return (
+                                <div key={carne.id}>
+                                    <span style={{fontSize:'17px', fontWeight:'bold'}} key={carne.id}>{carne.name}</span>
+                                    <div className="card">
+                                        <img src={carne.img_big} className="card-img-top" style={{width:'100%'}} alt="..."></img>
+                                        <div className="card-body" style={{textAlign:'right'}}>
+                                            <button type="button" className="btn btn-danger btn-sm" onClick={()=>ver_descripcion(carne.id)}>Ver descripción</button>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div className="col">
-                            <span style={{fontSize:'17px', fontWeight:'bold'}}>Tomahawk</span>
-                            <div className="card">
-                                <img src={tomahawk} class="card-img-top" style={{width:'100%'}} alt="..."></img>
-                                <div className="card-body" style={{textAlign:'right'}}>
-                                    <button type="button" class="btn btn-danger btn-sm" onClick={()=>ver_descripcion(id_carne)}>Ver descripción</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col">
-                            <span style={{fontSize:'17px', fontWeight:'bold'}}>Lomo Liso</span>
-                            <div className="card">
-                                <img src={lomo_liso} class="card-img-top" style={{width:'100%'}} alt="..."></img>
-                                <div className="card-body" style={{textAlign:'right'}}>
-                                    <button type="button" class="btn btn-danger btn-sm" onClick={()=>ver_descripcion(id_carne)}>Ver descripción</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col">
-                            <span style={{fontSize:'17px', fontWeight:'bold'}}>Asado Carnicero</span>
-                            <div className="card">
-                                <img src={asado_carnicero} class="card-img-top" alt="..."></img>
-                                <div className="card-body" style={{textAlign:'right'}}>
-                                    <button type="button" class="btn btn-danger btn-sm" onClick={()=>ver_descripcion(id_carne)}>Ver descripción</button>
-                                </div>
-                            </div>
-                        </div>
+                            )
+                        })
+                    } 
                     </div>
                 </div>
             </div>
