@@ -35,6 +35,8 @@ function App() {
         id: item.id,
         count: 1,
         price_normal: item.price_normal,
+        price_oferta: item.price_oferta,
+        oferta: item.oferta,
         img_small: item.img_small,
         name: item.name
       }
@@ -64,7 +66,7 @@ function App() {
 
  const totalCarrito =()=>{
    let total = 0
-   carrito.forEach((item)=> total += item.count * item.price_normal)
+   carrito.forEach((item)=> total += item.count * (item.oferta == 'si' ? item.price_oferta : item.price_normal))
 
    return formatPrice(total)
  }
