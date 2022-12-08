@@ -1,5 +1,5 @@
 import banner from './../assets/banner.jpg'
-import Header from './Header'
+import Header from '../components/Header'
 
 
 const Home = () => {

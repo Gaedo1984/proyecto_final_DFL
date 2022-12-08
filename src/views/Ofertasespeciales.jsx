@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom"
-import Header from './Header'
+import Header from '../components/Header.jsx'
 
 import banner from './../assets/banner.jpg'
 import chuleta_vetada from './../assets/chuleta.jpg'

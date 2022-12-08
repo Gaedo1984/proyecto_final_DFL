@@ -1,6 +1,6 @@
 import banner from './../assets/banner.jpg'
 import tomahawk from './../assets/tomahawk.jpg'
-import Header from './Header'
+import Header from '../components/Header.jsx'
 
 const Detallecarnes = ()=>{
     return(

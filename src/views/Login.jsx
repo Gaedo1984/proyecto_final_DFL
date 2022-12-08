@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom"
 import banner from './../assets/banner.jpg'
 import login from './../assets/login.png'
-import Header from './Header'
+import Header from '../components/Header.jsx'
 
 const Login = ()=>{
     const navigate = useNavigate()

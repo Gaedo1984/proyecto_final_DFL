@@ -1,4 +1,4 @@
-import Header from "./Header"
+import Header from "../components/Header.jsx"
 import lomo_vetado from './../assets/lomo_vetado.jpg'
 import chuleta_vetada from './../assets/chuleta.jpg'
 
