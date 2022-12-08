@@ -17,12 +17,57 @@ import Footer from './views/Footer'
 import Login from './views/Login'
 import Carrito from './views/Carrito'
 import Homeintranet from './views/Homeintranet'
+import { formatPrice } from './utils/utils'
 
 
 function App() {
   
   const api_carnes = "./src/assets/carnes.json"
   const [carnes, setCarnes] = useState([])
+  const [carrito, setCarrito] = useState([])
+
+  const agregarAlCarrito = (item)=> {
+    const itemIndex = carrito.findIndex((carne)=> carne.id === item.id)
+    const updateCart = [...carrito]
+
+    if(itemIndex === -1) {
+      const carne = {
+        id: item.id,
+        count: 1,
+        price_normal: item.price_normal,
+        img_small: item.img_small,
+        name: item.name
+      }
+
+      updateCart.push(carne)
+      
+    }else {
+      updateCart[itemIndex].count += 1
+    }
+    
+    setCarrito(updateCart)
+  }
+
+ const removerDelCarrito =(item)=>{
+  const itemIndex = carrito.findIndex((carne)=> carne.id === item.id)
+  const updateCart = [...carrito]
+
+  updateCart[itemIndex].count -= 1
+  
+  if(updateCart[itemIndex].count <= 0){
+    updateCart.splice(itemIndex, 1)
+  }
+
+  setCarrito(updateCart)
+
+ }
+
+ const totalCarrito =()=>{
+   let total = 0
+   carrito.forEach((item)=> total += item.count * item.price_normal)
+
+   return formatPrice(total)
+ }
 
   useEffect(
     ()=>{
@@ -36,7 +81,7 @@ function App() {
     }, [])
 
   
-  const globalState = {carnes}
+  const globalState = {carnes, carrito, agregarAlCarrito, removerDelCarrito, totalCarrito}
 
   return (
     <div className="App">

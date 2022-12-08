@@ -9,7 +9,7 @@ import Header from './Header'
 const Detallecarnes = ()=>{
 
     const {id_carne} = useParams()
-    const {carnes} = useContext(Context)
+    const {carnes, agregarAlCarrito} = useContext(Context)
 
     const [detalle_carnes, setTiposcarnes] = useState({price_oferta: 0, price_normal: 0})
     
@@ -54,7 +54,7 @@ const Detallecarnes = ()=>{
                                 }
                                 
                             </div>
-                            <button type="button" className="btn btn-success">Agregar al carro</button>
+                            <button type="button" className="btn btn-success" onClick={()=> agregarAlCarrito(detalle_carnes)}>Agregar al carro</button>
                         </div>
                     </div>
                 </div>
