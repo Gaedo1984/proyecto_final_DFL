@@ -1,7 +1,11 @@
 import {NavLink} from "react-router-dom"
-
+import Context from "../context/context.js"
+import { useContext, useEffect } from "react"
 
 const Navbar = ()=>{
+
+    const { admin } = useContext(Context)
+
     return(
         <div className="container-fluid">
             <div className="row menu-carrito" style={{background:'#BE0303'}}>
@@ -30,7 +34,10 @@ const Navbar = ()=>{
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link active" aria-current="page" to='/ofertas_especiales'><i className="fas fa-search-dollar"></i> Ofertas especiales</NavLink>
-                        </li>
+                        </li>   
+                        <li className="nav-item">
+                            {admin && <NavLink className="nav-link active" aria-current="page" to='/sales_admin'><i class="fa-solid fa-lock"></i> Administrar ofertas</NavLink>}
+                        </li>                         
                     </ul>
                     <div>
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
