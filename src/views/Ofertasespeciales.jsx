@@ -7,7 +7,7 @@ import Header from './Header'
 
 const Ofertasespeciales = () => {
 
-    const { carnes, ofertas, guardarOfertas } = useContext(Context)
+    const { carnes, ofertas, guardarOfertas, value } = useContext(Context)
 
     const [ofertasCarnes, setOfertascarnes] = useState([])
     const [infoFiltrada, setInfoFiltrada] = useState([]);

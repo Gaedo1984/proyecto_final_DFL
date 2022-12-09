@@ -26,11 +26,30 @@ function App() {
   const api_carnes = "/carnes.json"
   const api_users = "/usuarios.json"
   const [carnes, setCarnes] = useState([])
+  const [allCarnes, setAllCarnes] = useState([])
   const [carrito, setCarrito] = useState([])
+
+  const [value, setValue] = useState('')
 
   const [users, setUsers] = useState([])
   let [ofertas, setOfertas] = useState([])
   let [admin, setAdmin] = useState(false)
+
+
+
+  const filterData = ()=> {
+        
+    const search = value.toLowerCase()
+    
+    const filtered = allCarnes.filter((user)=>{
+        const name = user.name.toLowerCase()
+
+        
+        return name.includes(search)
+    })
+    
+    setCarnes(filtered)
+}
 
   const handleOfertas = (oferta) => {
     const enOferta = ofertas.includes(oferta)
@@ -112,11 +131,16 @@ function App() {
    return formatPrice(total)
  }
 
+ useEffect(()=>{
+  filterData()
+}, [value])
+
   useEffect(() => {
     fetch(api_carnes)
       .then((res) => res.json())
       .then((json) => {
         setCarnes(json)
+        setAllCarnes(json)
       })
       .catch((e) => console.log(e))
   }, [])
@@ -128,7 +152,7 @@ function App() {
       .catch((e) => console.log(e))
   }, [])
 
-  const globalState = { carnes, carrito, agregarAlCarrito, removerDelCarrito, totalCarrito, users, ofertas, handleOfertas, guardarOfertas, cambiarEstadoOferta, actAdmin, admin }
+  const globalState = { carnes, carrito, agregarAlCarrito, removerDelCarrito, totalCarrito, users, ofertas, handleOfertas, guardarOfertas, cambiarEstadoOferta, actAdmin, admin, value}
 
   return (
     <div className="App">
