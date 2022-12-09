@@ -16,13 +16,38 @@ const Tiposcarnes = ()=>{
     const {carnes, value} = useContext(Context)
 
     const [tipos_carnes, setTiposcarnes] = useState([])
-    
+    const [infoFiltrada, setInfoFiltrada] = useState([]);
+    const [valorBusqueda, setValorBusqueda] = useState("");
+ 
     const navigate = useNavigate()
+
+    useEffect(()=>{
+        filtraDatos();
+    }, [valorBusqueda])
+
 
     useEffect(()=>{
         const tipos_carnes = carnes.filter((carne)=>carne.tipo === variedad)
         setTiposcarnes(tipos_carnes)
+        setInfoFiltrada(tipos_carnes)
     }, [variedad])
+
+    
+    //Función que recibe los datos de búsqueda
+    const filtraDatos = ()=>{
+        
+        //Aquí realizo el filtrado sobre toda la data descargada desde la API
+        const filtrado = tipos_carnes.filter((datos)=>{
+        const carne_busqueda = datos.name.toLowerCase()
+        
+                
+        return carne_busqueda.includes(valorBusqueda.toLowerCase())
+
+        })
+
+        //Actualizo la información a mostrar
+        setInfoFiltrada(filtrado)
+    }
 
   
     const ver_descripcion = (id_carne) => navigate(`/detalle_carnes/${id_carne}`)
@@ -40,10 +65,8 @@ const Tiposcarnes = ()=>{
                     <div className="contenedor-buscador">
                         <form className="row g-3">
                             <div className="col-auto">
-                                <input type="text" className="form-control" id="staticEmail2" onChange={(e)=> setValue(e.target.value)}></input>
-                            </div>
-                            <div className="col-auto">
-                                <button type="submit" className="btn btn-primary mb-3">Buscar</button>
+                                <label style={{fontWeight:'bold', fontSize:'17px', paddingBottom: '10px'}}>Buscador</label>
+                                <input type="text" className="form-control" id="staticEmail2" onChange={(e)=> setValorBusqueda(e.target.value)}></input>
                             </div>
                         </form>
                     </div>
@@ -52,7 +75,8 @@ const Tiposcarnes = ()=>{
                 <div className="row contenedor-tipocarnes">
                     <div className="row row-cols-1 row-cols-md-3 g-4">
                     {
-                        tipos_carnes.map((carne)=>{
+                       
+                       infoFiltrada.map((carne)=>{
                             return (
                                 <div key={carne.id}>
                                     <span style={{fontSize:'17px', fontWeight:'bold'}} key={carne.id}>{carne.name}</span>
@@ -65,6 +89,7 @@ const Tiposcarnes = ()=>{
                                 </div>
                             )
                         })
+                        
                     } 
                     </div>
                 </div>
