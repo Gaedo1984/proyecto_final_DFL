@@ -37,7 +37,7 @@ const Navbar = ()=>{
                             <NavLink className="nav-link active" aria-current="page" to='/ofertas_especiales'><i className="fas fa-search-dollar"></i> Ofertas especiales</NavLink>
                         </li>   
                         <li className="nav-item">
-                            {admin && <NavLink className="nav-link active" aria-current="page" to='/sales_admin'><i class="fa-solid fa-lock"></i> Administrar ofertas</NavLink>}
+                            {admin && <NavLink className="nav-link active" aria-current="page" to='/sales_admin'><i className="fa-solid fa-lock"></i> Administrar ofertas</NavLink>}
                         </li>                         
                     </ul>
                     <div>

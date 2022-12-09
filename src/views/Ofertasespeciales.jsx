@@ -10,14 +10,40 @@ const Ofertasespeciales = () => {
     const { carnes, ofertas, guardarOfertas } = useContext(Context)
 
     const [ofertasCarnes, setOfertascarnes] = useState([])
+    const [infoFiltrada, setInfoFiltrada] = useState([]);
+    const [valorBusqueda, setValorBusqueda] = useState("");
 
     const navigate = useNavigate()
 
+
+    useEffect(()=>{
+        filtraDatos();
+    }, [valorBusqueda])
+
+
     useEffect(() => {
         const carnesOferta = carnes.filter((carne) => carne.oferta === 'si')
-        guardarOfertas(carnesOferta)
-        setOfertascarnes(ofertas)
-    }, [ofertasCarnes])
+        //guardarOfertas(carnesOferta)
+        setOfertascarnes(carnesOferta)
+        setInfoFiltrada(carnesOferta)
+    }, [])
+
+
+    //Función que recibe los datos de búsqueda
+    const filtraDatos = ()=>{
+        
+        //Aquí realizo el filtrado sobre toda la data descargada desde la API
+        const filtrado = ofertasCarnes.filter((datos)=>{
+        const carne_busqueda = datos.name.toLowerCase()
+        
+                
+        return carne_busqueda.includes(valorBusqueda.toLowerCase())
+
+        })
+
+        //Actualizo la información a mostrar
+        setInfoFiltrada(filtrado)
+    }
 
 
     //Aquí tiene que ir el ID de la carne
@@ -35,11 +61,9 @@ const Ofertasespeciales = () => {
                 <div className="row">
                     <div className="contenedor-buscador">
                         <form className="row g-3">
+                            <label style={{fontWeight:'bold', fontSize:'17px', paddingBottom: '10px'}}>Buscador</label>
                             <div className="col-auto">
-                                <input type="text" className="form-control" id="staticEmail2"></input>
-                            </div>
-                            <div className="col-auto">
-                                <button type="submit" className="btn btn-primary mb-3">Buscar</button>
+                                <input type="text" className="form-control" id="staticEmail2" onChange={(e)=> setValorBusqueda(e.target.value)}></input>
                             </div>
                         </form>
                     </div>
@@ -48,7 +72,7 @@ const Ofertasespeciales = () => {
                 <div className="row contenedor-tipocarnes">
                     <div className="row row-cols-1 row-cols-md-3 g-4">
                         {
-                            ofertasCarnes.map((carne) => {
+                            infoFiltrada.map((carne) => {
                                 return (
                                     <div className="col" key={carne.id}>
                                         <span style={{ fontSize: '17px', fontWeight: 'bold' }} key={carne.id}>{carne.name}</span>

@@ -1,12 +1,37 @@
 import { useNavigate } from "react-router-dom"
 import Context from "../context/context.js"
-import { useContext, useEffect } from "react"
+import { useContext, useEffect, useState } from "react"
 import ScrollToTop from "react-scroll-to-top";
 
 const SalesAdmin = () => {
     const navigate = useNavigate()
 
     const { carnes, handleOfertas, cambiarEstadoOferta, actAdmin } = useContext(Context)
+
+    const [infoFiltrada, setInfoFiltrada] = useState([]);
+    const [valorBusqueda, setValorBusqueda] = useState("");
+
+    useEffect(()=>{
+        filtraDatos();
+    }, [valorBusqueda])
+
+
+    //Función que recibe los datos de búsqueda
+    const filtraDatos = ()=>{
+        
+        //Aquí realizo el filtrado sobre toda la data descargada desde la API
+        const filtrado = carnes.filter((datos)=>{
+        const carne_busqueda = datos.name.toLowerCase()
+        
+                
+        return carne_busqueda.includes(valorBusqueda.toLowerCase())
+
+        })
+
+        //Actualizo la información a mostrar
+        setInfoFiltrada(filtrado)
+    }
+
 
     const logout = () => {
         localStorage.removeItem('token')
@@ -32,7 +57,7 @@ const SalesAdmin = () => {
             <div className="container">
                 <div className="row">
                     <div className="col">
-                        <h1>Administración de ofertas</h1>
+                        <h2>Administración de ofertas</h2>
                     </div>
                     <div className="col alinear">
                         <button onClick={() => logout()}>Logout</button>
@@ -43,10 +68,8 @@ const SalesAdmin = () => {
                         <div className="contenedor-buscador">
                             <form className="row g-3">
                                 <div className="col-auto">
-                                    <input type="text" className="form-control" id="staticEmail2"></input>
-                                </div>
-                                <div className="col-auto">
-                                    <button type="submit" className="btn btn-primary mb-3">Buscar</button>
+                                    <label style={{fontWeight:'bold', fontSize:'17px', paddingBottom: '10px'}}>Buscador</label>
+                                    <input type="text" className="form-control" id="staticEmail2" onChange={(e)=> setValorBusqueda(e.target.value)}></input>
                                 </div>
                             </form>
                         </div>
@@ -55,7 +78,7 @@ const SalesAdmin = () => {
                     <div className="row contenedor-tipocarnes">
                         <div className="row row-cols-1 row-cols-md-3 g-4">
                             {
-                                carnes.map((carne,index) => {
+                                infoFiltrada.map((carne,index) => {
                                     return (
                                         <div className="col" key={carne.id}>
                                             <span style={{ fontSize: '17px', fontWeight: 'bold' }} key={carne.id}>{carne.name}</span>
