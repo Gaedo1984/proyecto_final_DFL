@@ -13,7 +13,7 @@ import asado_carnicero from './../assets/asado_carnicero.jpg'
 const Tiposcarnes = ()=>{
 
     const {variedad} = useParams()
-    const {carnes} = useContext(Context)
+    const {carnes, value} = useContext(Context)
 
     const [tipos_carnes, setTiposcarnes] = useState([])
     
@@ -40,7 +40,7 @@ const Tiposcarnes = ()=>{
                     <div className="contenedor-buscador">
                         <form className="row g-3">
                             <div className="col-auto">
-                                <input type="text" className="form-control" id="staticEmail2"></input>
+                                <input type="text" className="form-control" id="staticEmail2" onChange={(e)=> setValue(e.target.value)}></input>
                             </div>
                             <div className="col-auto">
                                 <button type="submit" className="btn btn-primary mb-3">Buscar</button>

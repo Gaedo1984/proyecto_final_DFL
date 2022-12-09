@@ -7,7 +7,7 @@ import Header from './Header'
 
 const Ofertasespeciales = () => {
 
-    const { carnes, ofertas, guardarOfertas } = useContext(Context)
+    const { carnes, ofertas, guardarOfertas, value } = useContext(Context)
 
     const [ofertasCarnes, setOfertascarnes] = useState([])
 
@@ -36,7 +36,7 @@ const Ofertasespeciales = () => {
                     <div className="contenedor-buscador">
                         <form className="row g-3">
                             <div className="col-auto">
-                                <input type="text" className="form-control" id="staticEmail2"></input>
+                                <input type="text" className="form-control" id="staticEmail2" onChange={(e)=> setValue(e.target.value)}></input>
                             </div>
                             <div className="col-auto">
                                 <button type="submit" className="btn btn-primary mb-3">Buscar</button>
