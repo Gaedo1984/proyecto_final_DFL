@@ -4,6 +4,7 @@ import { useContext, useEffect } from "react"
 
 const Navbar = ()=>{
 
+    const { totalCarrito } = useContext(Context)
     const { admin } = useContext(Context)
 
     return(
@@ -13,7 +14,7 @@ const Navbar = ()=>{
                     <NavLink className="nav-link active" to='/'>Ricascarnes.cl</NavLink>
                 </div>
                 <div className="col-sm-12 col-lg-6 tit-carrito">
-                <NavLink className="nav-link active" aria-current="page" to='/carrito'><i className="fas fa-shopping-cart" style={{cursor: 'pointer'}}> $37.000</i></NavLink>
+                <NavLink className="nav-link active" aria-current="page" to='/carrito'><i className="fas fa-shopping-cart" style={{cursor: 'pointer'}}> ${totalCarrito()}</i></NavLink>
                 </div>
             </div>
             <nav className="navbar navbar-expand-lg bg-light">

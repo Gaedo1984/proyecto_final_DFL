@@ -18,6 +18,7 @@ import Carrito from './views/Carrito.jsx'
 import Homeintranet from './views/Homeintranet.jsx'
 import SalesAdmin from './views/SalesAdmin.jsx'
 import ProtectedRoute from './components/ProtectedRoute.jsx'
+import { formatPrice } from './utils/utils'
 
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
   const api_carnes = "/carnes.json"
   const api_users = "/usuarios.json"
   const [carnes, setCarnes] = useState([])
+  const [carrito, setCarrito] = useState([])
+
   const [users, setUsers] = useState([])
   let [ofertas, setOfertas] = useState([])
   let [admin, setAdmin] = useState(false)
@@ -63,6 +66,52 @@ function App() {
     setAdmin(estado)
   }
 
+
+  const agregarAlCarrito = (item)=> {
+    const itemIndex = carrito.findIndex((carne)=> carne.id === item.id)
+    const updateCart = [...carrito]
+
+    if(itemIndex === -1) {
+      const carne = {
+        id: item.id,
+        count: 1,
+        price_normal: item.price_normal,
+        price_oferta: item.price_oferta,
+        oferta: item.oferta,
+        img_small: item.img_small,
+        name: item.name
+      }
+
+      updateCart.push(carne)
+      
+    }else {
+      updateCart[itemIndex].count += 1
+    }
+    
+    setCarrito(updateCart)
+  }
+
+ const removerDelCarrito =(item)=>{
+  const itemIndex = carrito.findIndex((carne)=> carne.id === item.id)
+  const updateCart = [...carrito]
+
+  updateCart[itemIndex].count -= 1
+  
+  if(updateCart[itemIndex].count <= 0){
+    updateCart.splice(itemIndex, 1)
+  }
+
+  setCarrito(updateCart)
+
+ }
+
+ const totalCarrito =()=>{
+   let total = 0
+   carrito.forEach((item)=> total += item.count * (item.oferta == 'si' ? item.price_oferta : item.price_normal))
+
+   return formatPrice(total)
+ }
+
   useEffect(() => {
     fetch(api_carnes)
       .then((res) => res.json())
@@ -79,7 +128,7 @@ function App() {
       .catch((e) => console.log(e))
   }, [])
 
-  const globalState = { carnes, users, ofertas, handleOfertas, guardarOfertas, cambiarEstadoOferta, actAdmin, admin }
+  const globalState = { carnes, carrito, agregarAlCarrito, removerDelCarrito, totalCarrito, users, ofertas, handleOfertas, guardarOfertas, cambiarEstadoOferta, actAdmin, admin }
 
   return (
     <div className="App">
