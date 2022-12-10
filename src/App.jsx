@@ -73,10 +73,9 @@ function App() {
     setOfertas(ofertas)
   }
 
-  const cambiarEstadoOferta = (index,estado) => {
-    console.log('index: ' + index);
-    console.log('Estado:' + estado);
+  const cambiarEstadoOferta = (id,estado) => {
     let carnesActualizado = [...carnes]
+    let index = carnesActualizado.findIndex((carne) => carne.id === id)
     carnesActualizado[index].oferta = estado
     console.log('Carne: ' + carnesActualizado[index].oferta);
     setCarnes(carnesActualizado)

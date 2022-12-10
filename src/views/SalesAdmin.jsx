@@ -43,10 +43,10 @@ const SalesAdmin = () => {
         window.scrollTo(0, 0)
     }, [])
 
-    const saleUpdate = (carne, estado, index) => {
+    const saleUpdate = (carne, estado, id) => {
         console.log('estado al cambiar' + estado);
         handleOfertas(carne, saleUpdate)
-        cambiarEstadoOferta(index, estado)
+        cambiarEstadoOferta(id, estado)
 
 
     }
@@ -85,7 +85,7 @@ const SalesAdmin = () => {
                                             <div className="card">
                                                 <img src={carne.img_big} className="card-img-top" style={{ width: '100%' }} alt="..."></img>
                                                 <div className="card-body" style={{ textAlign: 'right' }}>
-                                                    <select name="sale-state" defaultValue={carne.oferta} onChange={(e) => saleUpdate(carne, e.target.value,index)} id="">
+                                                    <select name="sale-state" defaultValue={carne.oferta} onChange={(e) => saleUpdate(carne, e.target.value,carne.id)} id="">
                                                         <option value="si">Si</option>
                                                         <option value="no">No</option>
                                                     </select>
