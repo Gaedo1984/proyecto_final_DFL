@@ -218,6 +218,15 @@ nav {
         padding-top: 10px;
         padding-left: 0px;
     }
+    .carousel {
+        width: 100%;
+        max-width: 500px;
+        height: 360px;
+    }
+    .carousel-inner img {
+        min-width: 400px;
+        height: 300px;
+    }
 }
 
 @media (min-width: 577px) and (max-width: 992px) {
