@@ -35,18 +35,15 @@ const Navbar = ()=>{
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link active" aria-current="page" to='/ofertas_especiales'><i className="fas fa-search-dollar"></i> Ofertas especiales</NavLink>
-                        </li>   
-                        <li className="nav-item">
-                            {admin && <NavLink className="nav-link active" aria-current="page" to='/sales_admin'><i className="fa-solid fa-lock"></i> Administrar ofertas</NavLink>}
-                        </li>                         
+                        </li>
                     </ul>
                     <div>
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Recuperar contraseña</a>
+                                {admin && <NavLink className="nav-link active" aria-current="page" to='/sales_admin'><i className="fa-solid fa-lock"></i> Administrar ofertas</NavLink>}
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link active" aria-current="page" to='/login'>Ingresar</NavLink>
+                                <NavLink className="nav-link active" aria-current="page" to='/login'><i className="fa-regular fa-user"></i> Ingresar</NavLink>
                             </li>
                         </ul>
                     </div>

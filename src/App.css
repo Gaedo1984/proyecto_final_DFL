@@ -111,8 +111,19 @@ nav {
 }
 
 .carousel-inner img {
-    width: 700px;
+    min-width: 700px;
     height: 360px;
+}
+
+.payment {
+    padding-top: 9rem;
+    text-align: center;
+    height: 76.5vh;
+}
+.payment i {
+    font-size: 4rem;
+    display: inline-block;
+    margin-bottom: 2rem;
 }
 
 .contenedor-footer {

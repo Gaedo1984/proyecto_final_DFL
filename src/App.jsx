@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Context from './context/context'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
+import swal from 'sweetalert'
 import 'jquery/dist/jquery.min.js'
 import 'bootstrap/dist/js/bootstrap.js'
 import './App.css'
@@ -15,9 +16,9 @@ import Ofertasespeciales from './views/Ofertasespeciales.jsx'
 import Footer from './views/Footer.jsx'
 import Login from './views/Login.jsx'
 import Carrito from './views/Carrito.jsx'
-import Homeintranet from './views/Homeintranet.jsx'
 import SalesAdmin from './views/SalesAdmin.jsx'
 import ProtectedRoute from './components/ProtectedRoute.jsx'
+import Payment from "./views/Payment.jsx";
 import { formatPrice } from './utils/utils'
 
 
@@ -86,28 +87,33 @@ function App() {
   }
 
 
-  const agregarAlCarrito = (item)=> {
+  const agregarAlCarrito = (item, limpiar = "no")=> {
     const itemIndex = carrito.findIndex((carne)=> carne.id === item.id)
     const updateCart = [...carrito]
+    if(limpiar === "no"){
+      if(itemIndex === -1) {
+        const carne = {
+          id: item.id,
+          count: 1,
+          price_normal: item.price_normal,
+          price_oferta: item.price_oferta,
+          oferta: item.oferta,
+          img_small: item.img_small,
+          name: item.name
+        }
 
-    if(itemIndex === -1) {
-      const carne = {
-        id: item.id,
-        count: 1,
-        price_normal: item.price_normal,
-        price_oferta: item.price_oferta,
-        oferta: item.oferta,
-        img_small: item.img_small,
-        name: item.name
+        updateCart.push(carne)
+        menssageCart()
+
+      }else {
+        updateCart[itemIndex].count += 1
+        menssageCart()
       }
-
-      updateCart.push(carne)
-      
-    }else {
-      updateCart[itemIndex].count += 1
+      setCarrito(updateCart)
+    }else{
+      setCarrito([])
     }
-    
-    setCarrito(updateCart)
+
   }
 
  const removerDelCarrito =(item)=>{
@@ -124,11 +130,21 @@ function App() {
 
  }
 
- const totalCarrito =()=>{
+ const totalCarrito =(restart = "no")=>{
    let total = 0
-   carrito.forEach((item)=> total += item.count * (item.oferta == 'si' ? item.price_oferta : item.price_normal))
-
+    if(restart === "no"){
+      carrito.forEach((item)=> total += item.count * (item.oferta == 'si' ? item.price_oferta : item.price_normal))
+    }
    return formatPrice(total)
+ }
+
+ const menssageCart = () => {
+   swal({
+     title: "Agregado al carro",
+     text: "Ir al carro para procesar pago",
+     icon: "success",
+     button: "Aceptar"
+   })
  }
 
  useEffect(()=>{
@@ -166,7 +182,7 @@ function App() {
             <Route path='/ofertas_especiales' element={<Ofertasespeciales></Ofertasespeciales>}></Route>
             <Route path='/login' element={<Login></Login>}></Route>
             <Route path='/carrito' element={<Carrito></Carrito>}></Route>
-            <Route path='/home_intranet' element={<Homeintranet></Homeintranet>}></Route>
+            <Route path='/pago' element={<Payment></Payment>}></Route>
             <Route path='/sales_admin' element={
               <ProtectedRoute>
                 <SalesAdmin />

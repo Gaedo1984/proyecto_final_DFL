@@ -1,7 +1,28 @@
 import { formatPrice } from '../utils/utils.js'
+import {useNavigate} from "react-router-dom";
+import swal from "sweetalert";
 
 const CarritoLista = ({ carrito, agregarAlCarrito, removerDelCarrito, totalCarrito }) =>{
-    console.log(carrito)
+    const navigate = useNavigate()
+    const goPay = () => {
+        swal({
+            title: "PAGO",
+            text: "¿Está seguro de ir a pagar?",
+            icon: "warning",
+            buttons: ["No", "Si"]
+        }).then(resp => {
+            if(resp){
+                swal({
+                    text: "Redirigiendo a pago",
+                    icon: "warning",
+                    timer: "1500",
+                    button: []
+                })
+                navigate(`/pago`)
+            }
+        })
+    }
+
     return (
        <div className="container-fluid">
            {
@@ -48,7 +69,7 @@ const CarritoLista = ({ carrito, agregarAlCarrito, removerDelCarrito, totalCarri
                                         Total: ${totalCarrito()}
                                         </div>
                                         <div className="btn-pagar">
-                                        <button type="button" className="btn btn-primary btn-sm">Ir a pagar</button>
+                                        <button type="button" className="btn btn-primary btn-sm" onClick={() => goPay()} >Ir a pagar</button>
                                         </div>
                                     </div>
                                 </div>
