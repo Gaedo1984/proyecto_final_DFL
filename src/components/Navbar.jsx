@@ -1,11 +1,17 @@
 import {NavLink} from "react-router-dom"
 import Context from "../context/context.js"
-import { useContext, useEffect } from "react"
+import { useContext } from "react"
+import {useNavigate} from "react-router-dom";
 
 const Navbar = ()=>{
+    const navigate = useNavigate()
+    const { totalCarrito, admin, actAdmin } = useContext(Context)
 
-    const { totalCarrito } = useContext(Context)
-    const { admin } = useContext(Context)
+    const logout = () => {
+        localStorage.removeItem('token')
+        actAdmin(false)
+        navigate('/')
+    }
 
     return(
         <div className="container-fluid">
@@ -43,7 +49,10 @@ const Navbar = ()=>{
                                 {admin && <NavLink className="nav-link active" aria-current="page" to='/sales_admin'><i className="fa-solid fa-lock"></i> Administrar ofertas</NavLink>}
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link active" aria-current="page" to='/login'><i className="fa-regular fa-user"></i> Ingresar</NavLink>
+                                {!admin && <NavLink className="nav-link active" aria-current="page" to='/login'><i className="fa-regular fa-user"></i> Ingresar</NavLink>}
+                            </li>
+                            <li className="nav-item">
+                                {admin && <button type="button" className="nav-link active" aria-current="page" onClick={() => logout()}><i className="fa-regular fa-user"></i> Logout</button>}
                             </li>
                         </ul>
                     </div>

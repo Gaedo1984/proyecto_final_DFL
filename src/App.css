@@ -99,7 +99,8 @@ nav {
 }
 
 .carousel {
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
     height: 360px;
 }
 
@@ -111,7 +112,7 @@ nav {
 }
 
 .carousel-inner img {
-    min-width: 700px;
+    min-width: 500px;
     height: 360px;
 }
 
